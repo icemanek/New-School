@@ -10,12 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.security.Principal;
 import java.sql.SQLIntegrityConstraintViolationException;
-import java.util.Base64;
 import java.util.List;
 
 @CrossOrigin
@@ -45,15 +41,9 @@ public class UserController {
         User duplicateEmailUser = userRepository.findByEmail(user.getEmail());
         User duplicateUsernameUser = userRepository.findUserByUsername(user.getUsername());
 
-        if (duplicateUsernameUser != null){
+        if (duplicateUsernameUser != null || duplicateEmailUser != null){
 
             throw new SQLIntegrityConstraintViolationException("Istnieje taki user w bazie! ");
-
-        }
-        if(duplicateEmailUser != null){
-
-            throw new SQLIntegrityConstraintViolationException("Istnieje taki email w bazie! ");
-
         }
 
         userRepository.save(user);
