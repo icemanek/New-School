@@ -1,6 +1,6 @@
 # New-School
 
-This is new version of project "Szkoła Motocyklowa"
+This is new version of project "Szkoła Motocyklowa" / Motorcycle School
 
 
 
