@@ -11,9 +11,7 @@ import org.springframework.stereotype.Component;
 public class DataSource extends BasicDataSource {
 
    private String url;
-
    private String username;
-
    private String password;
 
     public BasicDataSource dataSource() {
