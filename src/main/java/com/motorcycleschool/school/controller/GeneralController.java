@@ -34,7 +34,6 @@ public class GeneralController {
             try {
                 url = new URL("http://develop.ms.codingtree.pl/api/meetings/sorted");
 
-
                 HttpURLConnection con = null;
                 try {
                     con = (HttpURLConnection) url.openConnection();
@@ -54,7 +53,6 @@ public class GeneralController {
                 } catch (ProtocolException | NullPointerException e) {
                     e.printStackTrace();
                 }
-
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
