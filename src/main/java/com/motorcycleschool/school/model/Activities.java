@@ -12,7 +12,6 @@ import java.util.Set;
 @Entity
 public class Activities {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long activitiesId;
