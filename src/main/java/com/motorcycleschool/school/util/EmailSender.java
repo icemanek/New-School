@@ -62,7 +62,7 @@ public class EmailSender {
 
             Transport.send(message);
 
-            System.out.println("Email resetowania hasła wysłany");
+            System.out.println("Email resetowania hasła został wysłany");
 
         } catch (MessagingException e) {
 
