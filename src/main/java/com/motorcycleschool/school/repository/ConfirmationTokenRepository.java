@@ -8,12 +8,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
+//@Service
 @Repository
 public interface ConfirmationTokenRepository extends CrudRepository<ConfirmationToken, String> {
 
-
     ConfirmationToken findByConfirmationToken(String confirmationToken);
-
 
     @Modifying
     @Query(value = "delete from ConfirmationToken t where t.expiryDate <= ?1")
