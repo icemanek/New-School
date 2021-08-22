@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
-//@Service
+@Service
 @Repository
 public interface ConfirmationTokenRepository extends CrudRepository<ConfirmationToken, String> {
 
